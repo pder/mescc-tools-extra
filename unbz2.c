@@ -860,11 +860,11 @@ int bunzipStream(int src_fd, int dst_fd)
     free(bd->inbuf);
     free(bd->outbuf);
     free(bd->selectors);
-    for (i = 0; i < MAX_GROUPS; i += 1)
+    for (j = 0; j < MAX_GROUPS; j += 1)
     {
-        free(bd->groups[i].limit);
-        free(bd->groups[i].base);
-        free(bd->groups[i].permute);
+        free(bd->groups[j].limit);
+        free(bd->groups[j].base);
+        free(bd->groups[j].permute);
     }
     free(bd->groups);
     free(bd->symToByte);
